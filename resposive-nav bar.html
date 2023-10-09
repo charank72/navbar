@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive nav bar</title>
+  <link rel="stylesheet" href="./responsive-nav bar.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <header>
+    <div class="navbar">
+        <div class="logo"><a href="#">
+          web dev creative
+        </a></div>
+        <ul class="links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">about</a></li>
+          <li><a href="#">services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <a href="#" class="action_btn">Get Started</a>
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="dropdown-menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">about</a></li>
+          <li><a href="#">services</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#" class="action_btn">Get Started</a></li>
+        </div>
+    </div>
+  </header>
+  <script>
+    const toogleBtn=document.querySelector('.toggle_btn');
+    const toogleBtnIcon=document.querySelector('.toggle_btn i');
+    const drop=document.querySelector('.dropdown-menu');
+    toogleBtn.onclick=function(){
+      drop.classList.toggle('open')
+      const isOpen=drop.classList.contains('open')
+
+      toogleBtnIcon.classList=isOpen
+      ? 'fa-solid fa-bars'
+      :'fa-solid fa-bars'
+    }
+  </script>
+</body>
+</html>
